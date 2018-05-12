@@ -11,20 +11,22 @@ namespace CountingChars
         static void Main(string[] args)
         {
             string path = @"C:\Users\Earl\Documents\GitHub\csharp-exercises\CountingChars\input.txt";
-            string input = File.ReadAllText(path);
-            Console.WriteLine(input);
 
+            Console.WriteLine("Enter something:");
+            string input = Console.ReadLine();
+            File.WriteAllText(path, input);
+            string openFile = File.ReadAllText(path);
             Dictionary<string, int> counts = new Dictionary<string, int>();
             int value = 1;
                      
-            for (int i = 0; i < input.Length; i++)
-                if (counts.ContainsKey(input[i].ToString()))
+            for (int i = 0; i < openFile.Length; i++)
+                if (counts.ContainsKey(openFile[i].ToString()))
                 {
-                    counts[input[i].ToString()]++;
+                    counts[openFile[i].ToString()]++;
                 }
                 else
                 {
-                    counts.Add(input[i].ToString(), value);
+                    counts.Add(openFile[i].ToString(), value);
                 }
             foreach (KeyValuePair<string, int> count in counts)
             {
