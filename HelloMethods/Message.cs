@@ -9,7 +9,8 @@ namespace HelloMethods
     {
         public static string GetMessage(string lang)
         {
-            if (lang.Equals("sp")) {
+            if (lang.Equals("sp"))
+            {
                 return "Hello World";
             }
             else if (lang.Equals("fr"))
