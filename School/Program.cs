@@ -1,0 +1,18 @@
+﻿using System;
+
+namespace School
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+
+    class Student
+    {
+
+    }
+
+}
